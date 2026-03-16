@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0079bf;
+    color: #172b4d;
+}
+
+.board {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.column {
+    width: 320px;
+    background: #ebecf0;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.column-title {
+    margin: 0 0 12px;
+    font-size: 14px;
+}
+
+.cards {
+    min-height: 24px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 30px 10px 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    cursor: grab;
+    word-break: break-word;
+}
+
+    .card.dragging,
+    .card:active {
+        cursor: grabbing;
+    }
+
+    .card.hidden {
+        opacity: 0;
+    }
+
+.delete-card {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0;
+    color: #6b778c;
+}
+
+.card:hover .delete-card {
+    opacity: 1;
+}
+
+.add-btn,
+.submit-btn,
+.cancel-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.add-btn {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    color: #5e6c84;
+    cursor: pointer;
+}
+
+.add-form textarea {
+    width: 100%;
+    min-height: 70px;
+    resize: vertical;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.add-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.submit-btn {
+    background: #5aac44;
+    color: #fff;
+}
+
+.cancel-btn {
+    background: #dfe1e6;
+}
+
+.placeholder {
+    border-radius: 6px;
+    background: rgba(9, 30, 66, 0.12);
+    margin-bottom: 8px;
+}
+
+.hidden {
+    display: none;
+}
