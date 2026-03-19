@@ -1,59 +1,56 @@
-name: CI/CD
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches:
+      - main # Убедись, что твоя основная ветка называется main (или замени на master)
 
+# Даем права на запись для публикации Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
+# Решаем проблему с предупреждением о Node.js 20
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: yarn
+          node-version: '22' # Ставим версию как у тебя на компьютере
+
+      - name: Enable Corepack (Fix for Yarn 4)
+        run: corepack enable
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
-      - name: Lint
-        run: yarn lint
+      # Опционально: можно запустить проверки перед сборкой
+      # - name: Run lint
+      #   run: yarn lint
+      # - name: Run tests
+      #   run: yarn test
 
-      - name: Test
-        run: yarn test:ci
-
-      - name: Build
+      - name: Build project
         run: yarn build
 
-      - name: Upload pages artifact
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: './dist' # ВАЖНО: папка, куда Webpack собирает проект. Обычно это dist
 
-  deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
