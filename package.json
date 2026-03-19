@@ -4,7 +4,9 @@
     "description": "Homework: Trello-like board with file handling and DnD",
     "private": true,
     "scripts": {
+        "prestart": "yarn repair:source",
         "start": "node ./node_modules/webpack-cli/bin/cli.js serve --mode development --open",
+        "prebuild": "yarn repair:source",
         "build": "node ./node_modules/webpack-cli/bin/cli.js --mode production",
         "lint": "eslint .",
         "test": "jest",

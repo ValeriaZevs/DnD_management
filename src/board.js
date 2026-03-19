@@ -5,6 +5,7 @@ export default class Board {
     this.container = container;
     this.state = loadState();
     this.dragged = null;
+    this.dragImage = null;
   }
 
   init() {
@@ -113,11 +114,22 @@ export default class Board {
     element.append(removeButton);
 
     element.addEventListener('dragstart', (event) => {
+      const rect = element.getBoundingClientRect();
+      const offsetX = event.clientX - rect.left;
+      const offsetY = event.clientY - rect.top;
+
+      this.dragImage = element.cloneNode(true);
+      this.dragImage.classList.remove('hidden');
+      this.dragImage.classList.add('drag-image');
+      this.dragImage.style.width = `${rect.width}px`;
+      document.body.append(this.dragImage);
+
       this.dragged = {
         cardId: card.id,
       };
       event.dataTransfer.effectAllowed = 'move';
       event.dataTransfer.setData('text/plain', card.id);
+      event.dataTransfer.setDragImage(this.dragImage, offsetX, offsetY);
       element.classList.add('dragging');
       requestAnimationFrame(() => {
         element.classList.add('hidden');
@@ -126,6 +138,8 @@ export default class Board {
 
     element.addEventListener('dragend', () => {
       this.dragged = null;
+      this.dragImage?.remove();
+      this.dragImage = null;
       this.render();
     });
 

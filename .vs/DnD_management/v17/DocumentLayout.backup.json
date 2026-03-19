@@ -7,44 +7,20 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\board.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-source.mjs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\repair-source.mjs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\webpack.config.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:webpack.config.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\src\\state.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\state.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-yarn.mjs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\repair-yarn.mjs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\jest.config.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:jest.config.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\state.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:__tests__\\state.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.github\\workflows\\deploy.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\workflows\\deploy.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.eslintrc.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.eslintrc.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:__tests__\\board.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,39 +34,42 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\css\\style.css",
+              "RelativeDocumentMoniker": "css\\style.css",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\css\\style.css",
+              "RelativeToolTip": "css\\style.css",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAYwIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-16T14:59:36.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "repair-source.mjs",
               "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-source.mjs",
               "RelativeDocumentMoniker": "scripts\\repair-source.mjs",
               "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-source.mjs",
               "RelativeToolTip": "scripts\\repair-source.mjs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwCAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T12:55:57.964Z"
+              "WhenOpened": "2026-03-16T14:53:03.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "state.js",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\src\\state.js",
-              "RelativeDocumentMoniker": "src\\state.js",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\src\\state.js",
-              "RelativeToolTip": "src\\state.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Title": "board.test.js",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js",
+              "RelativeDocumentMoniker": "__tests__\\board.test.js",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js",
+              "RelativeToolTip": "__tests__\\board.test.js",
+              "ViewState": "AgIAACMAAAAAAAAAAAAYwDkAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T12:41:50.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "webpack.config.js",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\webpack.config.js",
-              "RelativeDocumentMoniker": "webpack.config.js",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\webpack.config.js",
-              "RelativeToolTip": "webpack.config.js",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwDMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T12:41:05.899Z"
+              "WhenOpened": "2026-03-16T14:06:47.106Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -100,94 +79,23 @@
               "RelativeDocumentMoniker": "src\\board.js",
               "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\src\\board.js",
               "RelativeToolTip": "src\\board.js",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAowAkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAYwBABAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-03-16T12:40:42.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "repair-yarn.mjs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-yarn.mjs",
-              "RelativeDocumentMoniker": "scripts\\repair-yarn.mjs",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-yarn.mjs",
-              "RelativeToolTip": "scripts\\repair-yarn.mjs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T12:40:10.884Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\package.json",
               "RelativeDocumentMoniker": "package.json",
               "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\package.json",
               "RelativeToolTip": "package.json",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T12:39:35.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "jest.config.js",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\jest.config.js",
-              "RelativeDocumentMoniker": "jest.config.js",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\jest.config.js",
-              "RelativeToolTip": "jest.config.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T12:39:18.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "state.test.js",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\state.test.js",
-              "RelativeDocumentMoniker": "__tests__\\state.test.js",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\state.test.js",
-              "RelativeToolTip": "__tests__\\state.test.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T12:38:46.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVDhPrZRNTgIxFMerDIaEhHgU97JxwUKGGaNeQJdyCY0XUBDWGhg4AB\u002BuvQk7OQCRFTP1fXWmMxUMCT94ee177eu/LVQdFK31kTSJ0WgEIa0SMJ2A6QTHcF9iicQqlYpa/6zv2\u002B2HD5nuEkWR/l4udRzHZBtjGzFor1YrPR6P9WKx0MNhpN96vTuZThyLJ1AJLK/iJFFxjBanBsXIozqkWq2qev1c1Wq19063e0ZBwBNP4JaQ6WRC/i8ajQb5wWBAvnxyghpOqQPkC8L5IEEQKjgxaqOTFsCd65tb6nmlkur1\u002BxwXCgX58KfT7QptwvCK52wrSLcJvtUKOABkQ6HFXwbGsmMRBkchzpjNphLZDSrEn5G1qnsp\u002BPEtheloXouRnXDTTjhb5tXmeyg0IgzuliHp\u002By0OANbiOCDXp1IYo3mMUxBT8/mMA/8QhGH6ZzC4Zwi5ZqoQB9M3h62I/\u002B/SAQpniBmtPvdQyGeYUdgyX8pl05eIBSxmTzQYEYbc42AuJQWLGJNQEcrJG4A4BTHneSW2sqfKOyybkxXMPbAvrx3IsyLzkPJFmUcWYtDntjG6lIvnp8cvKXNIlPoFvstpJRlQPIAAAAAASUVORK5CYII=",
-              "WhenOpened": "2026-03-16T12:37:42.227Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "deploy.yml",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.github\\workflows\\deploy.yml",
-              "RelativeDocumentMoniker": ".github\\workflows\\deploy.yml",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.github\\workflows\\deploy.yml",
-              "RelativeToolTip": ".github\\workflows\\deploy.yml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-03-16T12:36:55.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": ".eslintrc.json",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.eslintrc.json",
-              "RelativeDocumentMoniker": ".eslintrc.json",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\.eslintrc.json",
-              "RelativeToolTip": ".eslintrc.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T12:36:30.633Z"
+              "WhenOpened": "2026-03-16T12:39:35.996Z",
+              "EditorCaption": ""
             }
           ]
         }

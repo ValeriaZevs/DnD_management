@@ -9,11 +9,14 @@ if (!fs.existsSync(file)) {
 }
 
 const content = fs.readFileSync(file, 'utf8');
-const looksLikePatch = content.startsWith('diff --git ') || content.includes('\nnew file mode ');
+const looksLikePatch = content.startsWith('diff --git ')
+  || content.includes('\nnew file mode ')
+  || /^\s*(?:@@ .* @@|--- a\/|\+\+\+ b\/)/m.test(content)
+  || /^(?:<<<<<<<|=======|>>>>>>>)/m.test(content);
 
 if (!looksLikePatch) {
   // eslint-disable-next-line no-console
-  console.log(`${file} looks valid, patch markers not found.`);
+  console.log(`${file} looks valid, corruption markers not found.`);
   process.exit(0);
 }
 

@@ -52,7 +52,26 @@ body {
 
     .card.hidden {
         opacity: 0;
+        height: 0;
+        min-height: 0;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: 0;
+        overflow: hidden;
+        pointer-events: none;
     }
+
+.drag-image {
+    transform: rotate(2deg);
+    box-shadow: 0 6px 12px rgba(9, 30, 66, 0.2);
+    opacity: 0.95;
+    pointer-events: none;
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+    z-index: 9999;
+}
 
 .delete-card {
     position: absolute;
