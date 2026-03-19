@@ -3,20 +3,24 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Убедись, что твоя основная ветка называется main (или замени на master)
+      - main
 
-# Даем права на запись для публикации Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Решаем проблему с предупреждением о Node.js 20
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  # Принудительно заставляем actions работать на новой версии Node
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   build-and-deploy:
+    # ДОБАВЛЕНО: Явно указываем окружение для деплоя
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
     runs-on: ubuntu-latest
     
     steps:
@@ -26,19 +30,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22' # Ставим версию как у тебя на компьютере
+          node-version: '22'
 
       - name: Enable Corepack (Fix for Yarn 4)
         run: corepack enable
 
       - name: Install dependencies
         run: yarn install --immutable
-
-      # Опционально: можно запустить проверки перед сборкой
-      # - name: Run lint
-      #   run: yarn lint
-      # - name: Run tests
-      #   run: yarn test
 
       - name: Build project
         run: yarn build
@@ -49,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # ВАЖНО: папка, куда Webpack собирает проект. Обычно это dist
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
