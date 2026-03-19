@@ -5,12 +5,12 @@
     "private": true,
     "scripts": {
         "prestart": "yarn repair:source",
-        "start": "node ./node_modules/webpack-cli/bin/cli.js serve --mode development --open",
+        "start": "node scripts/repair-source.mjs && node ./node_modules/webpack-cli/bin/cli.js serve --mode development --open",
         "prebuild": "yarn repair:source",
-        "build": "node ./node_modules/webpack-cli/bin/cli.js --mode production",
-        "lint": "eslint .",
-        "test": "jest",
-        "test:ci": "jest --ci --runInBand",
+        "build": "node scripts/repair-source.mjs && node ./node_modules/webpack-cli/bin/cli.js --mode production",
+        "lint": "node scripts/repair-source.mjs && eslint .",
+        "test": "node scripts/repair-source.mjs && jest",
+        "test:ci": "node scripts/repair-source.mjs && jest --ci --runInBand",
         "repair:yarn": "node scripts/repair-yarn.mjs",
         "doctor:webpack": "node -e \"const fs=require('fs');const p='node_modules/webpack/bin/webpack.js';if(fs.existsSync(p)){console.log('ok:',p);process.exit(0)}console.error('missing:',p);process.exit(1)\"",
         "repair:source": "node scripts/repair-source.mjs"

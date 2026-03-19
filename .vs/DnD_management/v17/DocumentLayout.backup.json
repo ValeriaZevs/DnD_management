@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:__tests__\\board.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\src\\board.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\board.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\eslint.config.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eslint.config.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-source.mjs||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:__tests__\\board.test.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +34,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "eslint.config.js",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\eslint.config.js",
+              "RelativeDocumentMoniker": "eslint.config.js",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\eslint.config.js",
+              "RelativeToolTip": "eslint.config.js",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-19T09:16:56.26Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -40,14 +57,26 @@
               "RelativeDocumentMoniker": "css\\style.css",
               "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\css\\style.css",
               "RelativeToolTip": "css\\style.css",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAYwIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAmwGEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-16T14:59:36.676Z",
+              "WhenOpened": "2026-03-16T14:59:36.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "board.test.js",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js",
+              "RelativeDocumentMoniker": "__tests__\\board.test.js",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js",
+              "RelativeToolTip": "__tests__\\board.test.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-16T14:06:47.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "repair-source.mjs",
               "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\scripts\\repair-source.mjs",
               "RelativeDocumentMoniker": "scripts\\repair-source.mjs",
@@ -55,38 +84,24 @@
               "RelativeToolTip": "scripts\\repair-source.mjs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAYwCAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T14:53:03.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T14:53:03.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "board.test.js",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js",
-              "RelativeDocumentMoniker": "__tests__\\board.test.js",
-              "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\__tests__\\board.test.js",
-              "RelativeToolTip": "__tests__\\board.test.js",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwDkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-16T14:06:47.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "board.js",
               "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\src\\board.js",
               "RelativeDocumentMoniker": "src\\board.js",
               "ToolTip": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\src\\board.js",
               "RelativeToolTip": "src\\board.js",
-              "ViewState": "AgIAAPoAAAAAAAAAAAAYwBABAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-03-16T12:40:42.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\\u0412\u0430\u043B\u0435\u0440\u0438\\DnD_management\\package.json",
               "RelativeDocumentMoniker": "package.json",
@@ -94,8 +109,7 @@
               "RelativeToolTip": "package.json",
               "ViewState": "AgIAAA8AAAAAAAAAAAAQwCQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T12:39:35.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T12:39:35.996Z"
             }
           ]
         }
