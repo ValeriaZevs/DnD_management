@@ -4,8 +4,17 @@ export default class Board {
   constructor(container) {
     this.container = container;
     this.state = loadState();
+    
+    // Переменные для хранения состояния DnD
     this.dragged = null;
     this.dragImage = null;
+    this.placeholder = null;
+    this.shiftX = 0;
+    this.shiftY = 0;
+
+    // Привязываем контекст для глобальных обработчиков
+    this.onPointerMove = this.onPointerMove.bind(this);
+    this.onPointerUp = this.onPointerUp.bind(this);
   }
 
   init() {
@@ -40,6 +49,7 @@ export default class Board {
     if (!card) return;
 
     let targetIndex = target.index;
+    // Корректировка индекса при перемещении вниз в той же колонке
     if (sourceColumn.id === target.columnId && sourceIndex < target.index) {
       targetIndex -= 1;
     }
@@ -78,13 +88,6 @@ export default class Board {
     const cards = document.createElement('div');
     cards.className = 'cards';
     cards.dataset.columnId = column.id;
-    cards.addEventListener('dragover', (event) => this.onDragOver(event, cards));
-    cards.addEventListener('drop', (event) => this.onDrop(event, cards));
-    cards.addEventListener('dragleave', (event) => {
-      if (!cards.contains(event.relatedTarget)) {
-        cards.querySelector('.placeholder')?.remove();
-      }
-    });
 
     column.cards.forEach((card, index) => {
       cards.append(this.createCard(column.id, card, index));
@@ -100,7 +103,6 @@ export default class Board {
     const element = document.createElement('article');
     element.className = 'card';
     element.textContent = card.text;
-    element.draggable = true;
     element.dataset.cardId = card.id;
     element.dataset.columnId = columnId;
     element.dataset.index = String(index);
@@ -109,38 +111,48 @@ export default class Board {
     removeButton.className = 'delete-card';
     removeButton.type = 'button';
     removeButton.textContent = '✕';
-    removeButton.addEventListener('click', () => this.deleteCard(columnId, card.id));
+    removeButton.addEventListener('click', (e) => {
+      e.stopPropagation(); // Чтобы клик по крестику не начинал Drag and Drop
+      this.deleteCard(columnId, card.id);
+    });
 
     element.append(removeButton);
 
-    element.addEventListener('dragstart', (event) => {
-      const rect = element.getBoundingClientRect();
-      const offsetX = event.clientX - rect.left;
-      const offsetY = event.clientY - rect.top;
+    // Вместо dragstart используем mousedown / pointerdown
+    element.addEventListener('pointerdown', (event) => {
+      if (event.target === removeButton) return;
+      event.preventDefault(); // Предотвращаем выделение текста
 
-      this.dragImage = element.cloneNode(true);
-      this.dragImage.classList.remove('hidden');
-      this.dragImage.classList.add('drag-image');
-      this.dragImage.style.width = `${rect.width}px`;
-      document.body.append(this.dragImage);
+      const rect = element.getBoundingClientRect();
+      
+      // Запоминаем сдвиг курсора относительно левого верхнего угла карточки
+      this.shiftX = event.clientX - rect.left;
+      this.shiftY = event.clientY - rect.top;
 
       this.dragged = {
         cardId: card.id,
+        element: element
       };
-      event.dataTransfer.effectAllowed = 'move';
-      event.dataTransfer.setData('text/plain', card.id);
-      event.dataTransfer.setDragImage(this.dragImage, offsetX, offsetY);
-      element.classList.add('dragging');
-      requestAnimationFrame(() => {
-        element.classList.add('hidden');
-      });
-    });
 
-    element.addEventListener('dragend', () => {
-      this.dragged = null;
-      this.dragImage?.remove();
-      this.dragImage = null;
-      this.render();
+      // Создаем "призрака" для перетаскивания
+      this.dragImage = element.cloneNode(true);
+      this.dragImage.classList.add('drag-image');
+      this.dragImage.style.width = `${rect.width}px`;
+      this.dragImage.style.height = `${rect.height}px`;
+      
+      // Позиционируем клон прямо под курсором
+      this.dragImage.style.left = `${event.pageX - this.shiftX}px`;
+      this.dragImage.style.top = `${event.pageY - this.shiftY}px`;
+      
+      document.body.append(this.dragImage);
+      document.body.classList.add('drag-active'); // Меняем курсор глобально
+
+      // Прячем оригинальную карточку (остается в DOM для расчетов, но невидима)
+      element.classList.add('drag-source-hidden');
+
+      // Навешиваем слушатели на весь документ
+      document.addEventListener('pointermove', this.onPointerMove);
+      document.addEventListener('pointerup', this.onPointerUp);
     });
 
     return element;
@@ -202,73 +214,114 @@ export default class Board {
     return formWrapper;
   }
 
-  onDragOver(event, container) {
-    event.preventDefault();
-    if (!this.dragged) return;
+  onPointerMove(event) {
+    if (!this.dragImage || !this.dragged) return;
 
-    const cardsContainer = container || event.target.closest('.cards');
+    // Двигаем "призрака" за мышкой, сохраняя изначальный сдвиг
+    this.dragImage.style.left = `${event.pageX - this.shiftX}px`;
+    this.dragImage.style.top = `${event.pageY - this.shiftY}px`;
+
+    // Определяем контейнер под курсором
+    const cardsContainer = this.getCardsContainerFromPosition(event.clientX, event.clientY);
     if (!cardsContainer) return;
 
+    // Находим элемент, перед которым нужно вставить плейсхолдер
     const afterElement = this.getDragAfterElement(cardsContainer, event.clientY);
-    this.showPlaceholder(cardsContainer, afterElement);
+    this.showPlaceholder(cardsContainer, afterElement, this.dragged.element.offsetHeight);
   }
 
-  onDrop(event, container) {
-    event.preventDefault();
+  onPointerUp(event) {
+    document.removeEventListener('pointermove', this.onPointerMove);
+    document.removeEventListener('pointerup', this.onPointerUp);
+    document.body.classList.remove('drag-active');
+
     if (!this.dragged) return;
 
-    const cardsContainer = container || event.target.closest('.cards');
-    if (!cardsContainer) return;
+    // Если есть плейсхолдер, значит мы бросили карточку в валидное место
+    if (this.placeholder && this.placeholder.parentNode) {
+      const target = this.getDropTarget();
+      if (target) {
+        this.moveCard(this.dragged.cardId, target);
+      }
+    } else {
+      // Если бросили мимо колонок, возвращаем видимость оригиналу
+      this.dragged.element.classList.remove('drag-source-hidden');
+    }
 
-    const placeholder = cardsContainer.querySelector('.placeholder');
-    const targetIndex = placeholder
-      ? Number(placeholder.dataset.index)
-      : cardsContainer.querySelectorAll('.card:not(.hidden)').length;
+    // Очистка
+    this.dragImage?.remove();
+    this.placeholder?.remove();
+    this.dragged = null;
+    this.dragImage = null;
+    this.placeholder = null;
+  }
 
-    this.moveCard(this.dragged.cardId, {
+  // Метод для тестов и поиска колонки по координатам
+  getCardsContainerFromPosition(x, y) {
+    // Временно скрываем клона, чтобы он не перекрывал элементы под ним
+    if (this.dragImage) {
+      this.dragImage.style.visibility = 'hidden';
+    }
+    
+    const elemBelow = document.elementFromPoint(x, y);
+    
+    if (this.dragImage) {
+      this.dragImage.style.visibility = 'visible';
+    }
+
+    if (!elemBelow) return null;
+    return elemBelow.closest('.cards');
+  }
+
+  getDropTarget() {
+    if (!this.placeholder || !this.placeholder.parentNode) return null;
+    
+    const cardsContainer = this.placeholder.closest('.cards');
+    if (!cardsContainer) return null;
+
+    return {
       columnId: cardsContainer.dataset.columnId,
-      index: targetIndex,
-    });
+      index: Number(this.placeholder.dataset.index),
+    };
   }
 
   getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll('.card:not(.hidden)')];
+    // Ищем все карточки в контейнере, кроме перетаскиваемой (она скрыта классом)
+    const draggableElements = [...container.querySelectorAll('.card:not(.drag-source-hidden)')];
 
-    return draggableElements.reduce(
-      (closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = y - box.top - box.height / 2;
-        if (offset < 0 && offset > closest.offset) {
-          return { offset, element: child };
-        }
-        return closest;
-      },
-      { offset: Number.NEGATIVE_INFINITY, element: null },
-    ).element;
+    return draggableElements.reduce((closest, child) => {
+      const box = child.getBoundingClientRect();
+      // Центр карточки
+      const offset = y - box.top - box.height / 2;
+      
+      // Нам нужен элемент, центр которого находится чуть ниже курсора
+      if (offset < 0 && offset > closest.offset) {
+        return { offset, element: child };
+      }
+      return closest;
+    }, { offset: Number.NEGATIVE_INFINITY, element: null }).element;
   }
 
-  showPlaceholder(container, beforeElement) {
-    container.querySelector('.placeholder')?.remove();
-
-    const placeholder = document.createElement('div');
-    placeholder.className = 'placeholder';
-
-    if (this.dragged) {
-      const draggedElement = this.container.querySelector(`[data-card-id="${this.dragged.cardId}"]`);
-      placeholder.style.height = `${draggedElement?.offsetHeight || 48}px`;
+  showPlaceholder(container, beforeElement, height) {
+    if (!this.placeholder) {
+      this.placeholder = document.createElement('div');
+      this.placeholder.className = 'placeholder';
     }
 
-    const visibleCards = [...container.querySelectorAll('.card:not(.hidden)')];
-    let index = visibleCards.length;
+    if (height) {
+      this.placeholder.style.height = `${height}px`;
+    }
 
+    const visibleCards = [...container.querySelectorAll('.card:not(.drag-source-hidden)')];
+    
     if (beforeElement) {
-      index = visibleCards.indexOf(beforeElement);
-      placeholder.dataset.index = String(index);
-      container.insertBefore(placeholder, beforeElement);
-      return;
+      const index = visibleCards.indexOf(beforeElement);
+      this.placeholder.dataset.index = String(index);
+      container.insertBefore(this.placeholder, beforeElement);
+    } else {
+      // Вставляем в конец колонки
+      this.placeholder.dataset.index = String(visibleCards.length);
+      container.append(this.placeholder);
     }
-
-    placeholder.dataset.index = String(index);
-    container.append(placeholder);
   }
 }
