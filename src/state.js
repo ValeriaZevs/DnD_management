@@ -1,4 +1,7 @@
 const STORAGE_KEY = 'trello-board-state';
+const EXPECTED_COLUMNS_COUNT = 3;
+const ID_RADIX = 16;
+const ID_SLICE_START = 2;
 
 export const createDefaultState = () => ({
   columns: [
@@ -16,7 +19,7 @@ export const loadState = () => {
 
   try {
     const parsed = JSON.parse(raw);
-    if (!parsed.columns || parsed.columns.length !== 3) {
+    if (!parsed.columns || parsed.columns.length !== EXPECTED_COLUMNS_COUNT) {
       return createDefaultState();
     }
     return parsed;
@@ -29,4 +32,4 @@ export const saveState = (state) => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 };
 
-export const generateId = () => `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+export const generateId = () => `${Date.now()}-${Math.random().toString(ID_RADIX).slice(ID_SLICE_START)}`;

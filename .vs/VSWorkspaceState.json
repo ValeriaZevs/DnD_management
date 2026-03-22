@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\.yarn",
+    "\\css",
+    "\\scripts",
+    "\\src",
+    "\\__tests__"
+  ],
+  "SelectedNode": "\\src\\index.js",
+  "PreviewInSolutionExplorer": false
+}

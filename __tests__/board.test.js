@@ -107,6 +107,8 @@ describe('board drag helpers', () => {
       height: 140,
     });
 
+    document.elementFromPoint = jest.fn(() => cards[1]);
+
     expect(board.getCardsContainerFromPosition(150, 120)).toBe(cards[1]);
   });
 
@@ -142,6 +144,61 @@ describe('board drag helpers', () => {
     expect(board.placeholder.dataset.index).toBe('1');
     expect(board.placeholder.style.height).toBe('64px');
     expect(container.lastElementChild).toBe(board.placeholder);
+  });
+
+  test('onPointerMove keeps placeholder height equal to dragged card height', () => {
+    const board = makeBoard();
+    const sourceElement = document.createElement('article');
+    sourceElement.className = 'card drag-source-hidden';
+
+    board.dragged = {
+      cardId: 'b',
+      element: sourceElement,
+      height: 72,
+    };
+    board.dragImage = document.createElement('article');
+    board.shiftX = 0;
+    board.shiftY = 0;
+
+    const targetContainer = document.createElement('div');
+    targetContainer.className = 'cards';
+    const targetCard = document.createElement('article');
+    targetCard.className = 'card';
+    targetContainer.append(targetCard);
+
+    board.getCardsContainerFromPosition = jest.fn(() => targetContainer);
+    board.getDragAfterElement = jest.fn(() => targetCard);
+
+    board.onPointerMove({
+      pageX: 10,
+      pageY: 20,
+      clientX: 10,
+      clientY: 20,
+    });
+
+    expect(board.placeholder).not.toBeNull();
+    expect(board.placeholder.style.height).toBe('72px');
+    expect(targetContainer.firstElementChild).toBe(board.placeholder);
+  });
+
+  test('getDragAfterElement uses cursor position relative to card center', () => {
+    const board = makeBoard();
+    const container = document.createElement('div');
+    container.className = 'cards';
+
+    const first = document.createElement('article');
+    first.className = 'card';
+    first.getBoundingClientRect = () => ({ top: 0, height: 100 });
+
+    const second = document.createElement('article');
+    second.className = 'card';
+    second.getBoundingClientRect = () => ({ top: 120, height: 100 });
+
+    container.append(first, second);
+
+    expect(board.getDragAfterElement(container, 40)).toBe(first);
+    expect(board.getDragAfterElement(container, 160)).toBe(second);
+    expect(board.getDragAfterElement(container, 260)).toBeNull();
   });
 
   test('onPointerUp moves card to drop target', () => {
